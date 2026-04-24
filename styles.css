@@ -1,0 +1,186 @@
+/* Recurra static site — minimal, mobile-friendly */
+
+:root {
+  --bg: #faf9f7;
+  --text: #1a1a1a;
+  --muted: #5c5c5c;
+  --link: #2d5a4a;
+  --link-hover: #1f3f34;
+  --border: #e8e6e3;
+  --max: 40rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--link-hover);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
+}
+
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 1.25rem;
+  background: #fff;
+}
+
+.site-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.site-title a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.site-title a:hover {
+  color: var(--link);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+nav a {
+  font-size: 0.9375rem;
+  text-decoration: none;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 2.5rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0 0 1rem;
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 1.75rem 0 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+p,
+li {
+  margin: 0 0 0.75rem;
+  color: var(--text);
+}
+
+.lead {
+  font-size: 1.0625rem;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+}
+
+ul.plain {
+  margin: 0.5rem 0 1rem;
+  padding-left: 1.25rem;
+}
+
+ul.plain li {
+  margin-bottom: 0.5rem;
+}
+
+.meta {
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.faq-item {
+  margin-bottom: 1.25rem;
+}
+
+.faq-item p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-item strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--text);
+}
+
+footer {
+  padding: 1rem 1.25rem 1.5rem;
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  background: #fff;
+}
+
+footer p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.callout {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.125rem;
+  margin: 1.25rem 0;
+}
+
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 32rem) {
+  main {
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+}
